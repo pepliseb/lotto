@@ -1,16 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 <h1>Wylosowane liczby to:</h1>
-<ul>
-    <li> </li>
+<ol>
+    <li th:each="num: ${numbers}" th:text="${num}"> </li>
 
 
-</ul>
+</ol>
+
+<table>
+    <tr>
+        <th colspan="6"> Lotto </th>
+    </tr>
+    <tr>
+        <td  th:each="num: ${numbers}" th:text="${num}"></td>
+
+    </tr>
+</table>
 
 </body>
 </html>

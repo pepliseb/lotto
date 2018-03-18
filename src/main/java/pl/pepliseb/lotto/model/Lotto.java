@@ -7,11 +7,10 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 public class Lotto {
-    static List<Integer> generateLottoNumber() {
+    public static List<Integer> generateLottoNumbers() {
         Random random = new Random();
         random.nextInt(49);
         Set<Integer> numbers = new TreeSet<>();
-
         while (numbers.size() != 6) {
             numbers.add(random.nextInt(49) + 1);
         }
